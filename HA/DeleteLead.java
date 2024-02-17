@@ -28,6 +28,15 @@ driver.findElement(By.name("phoneNumber")).sendKeys("9876543210");
 driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 //driver.findElement(By.xpath("(//tr[@class='x-grid3-hd-row']//div)[1]")).click();
 Thread.sleep(1000);
+String records=driver.findElement(By.xpath("//div[@id='ext-gen304']/div")).getText();
+System.out.println(records);
+String [] parts = records.split(" ", 2);
+String part1 = parts[0];
+System.out.println(part1);
+if (part1.contains("No")) {
+System.out.println("No records available with this phone#9876543210");
+driver.close();
+} else {
 String firstID=driver.findElement(By.xpath("(//table[@class='x-grid3-row-table'])[1]//a")).getText();
 System.out.println(firstID);
 driver.findElement(By.xpath("(//table[@class='x-grid3-row-table'])[1]//a")).click();
@@ -36,8 +45,10 @@ driver.findElement(By.xpath("//a[text()='Find Leads']")).click();
 driver.findElement(By.name("id")).sendKeys(firstID);
 driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 String noRecords=driver.findElement(By.xpath("//div[text()='No records to display']")).getText();
-System.out.println(noRecords+" "+firstID);
+if (noRecords.contains("No records to display")) {
+System.out.println("Record no. "+firstID+" successfully deleted");
 driver.close();
+}}
 
 }
 }
