@@ -33,3 +33,11 @@ System.out.println(driver.findElement(By.xpath("//form[contains(text(),'Your cur
 System.out.println(driver.findElement(By.xpath("//form[contains(text(),'Your current web browser is:')]//input[2]")).isSelected());
 }
 }
+/***
+<!-- https://mvnrepository.com/artifact/io.github.sukgu/automation -->
+<dependency>
+    <groupId>io.github.sukgu</groupId>
+    <artifactId>automation</artifactId>
+    <version>0.1.4.1</version>
+</dependency>
+*****/
