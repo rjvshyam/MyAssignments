@@ -30,3 +30,25 @@ System.out.println("Administrator Certificate three :"+cert3Name);
 }
 
 }
+
+********************************************************************************************************************************************************************
+  <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="5">
+<parameter name="url" value="https://login.salesforce.com/"></parameter>
+<parameter name="username" value="gokul.sekar@testleaf.com"></parameter>
+<parameter name="password" value="Leaf@123"></parameter>
+  <test name="Test1">
+<parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="week5.HA5.AdministratorCertifications"/>
+
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test2">
+<parameter name="browser" value="edge"></parameter>
+    <classes>
+      <class name="week5.HA5.ArchitectCertifications"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
