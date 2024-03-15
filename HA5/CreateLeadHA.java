@@ -32,3 +32,22 @@ public class CreateLeadHA extends ProjectSpecificMethod{
 	}
 
 }
+********************************************************************************************
+	<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5" parallel="tests" verbose="5">
+<parameter name="url" value="http://leaftaps.com/opentaps/control/main"></parameter>
+<parameter name="username" value="Demosalesmanager"></parameter>
+<parameter name="password" value="crmsfa"></parameter>
+  <test name="Test1">
+    <classes>
+      <class name="week5.HA5.CreateLeadHA"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test2">
+    <classes>
+      <class name="week5.HA5.EditLeadHA"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
