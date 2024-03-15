@@ -26,6 +26,17 @@ public class EditLeadHA extends ProjectSpecificMethod{
 }
 }
 
+*****************************************************************************************************************************************************************************
+	<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="5" verbose="5">
+  <test name="Test">
+    <classes>
+      <class name="week5.HA5.EditLeadHA"/>
+      <class name="week5.HA5.CreateLeadHA"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
 
 
 
